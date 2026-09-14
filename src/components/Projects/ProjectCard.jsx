@@ -1,7 +1,7 @@
 import React from 'react'
 
 function ProjectCard({project}) {
-    const {name, animateType, animateDelay, icon, description, skills, github} = project;
+    const {name, icon, description, skills, github} = project;
 
     const openSource = (e) => {
         e.stopPropagation();
@@ -9,7 +9,7 @@ function ProjectCard({project}) {
     
   return (
     <>
-        <div className="card-container" data-aos={animateType} data-aos-delay={animateDelay}>
+        <div className="card-container">
             <div className="card-header">
                 <h3>{name}</h3>
                 {icon}

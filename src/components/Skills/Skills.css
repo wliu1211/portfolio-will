@@ -135,55 +135,82 @@
 .back-container .back-body .mongo{
     color: rgb(75,161,62);
 }
-.other-container .other-body .unity{
-    color: rgb(121,121,121);
+.back-container .back-body .fastapi{
+    color: rgb(0, 150, 136);
+}
+.back-container .back-body .python{
+    color: rgb(14, 159, 60);
+}
+.back-container .back-body .postgres{
+    color: rgb(51, 103, 145);
+}
+.back-container .back-body .docker{
+    color: rgb(13, 183, 237);
 }
 .other-container .other-body .github{
     color: rgb(110, 84, 148);
 }
-.other-container .other-body .python{
-    color: rgb(14, 159, 60);
+.other-container .other-body .linux{
+    color: rgb(252, 186, 3);
+}
+.other-container .other-body .pytest{
+    color: rgb(0, 150, 136);
+}
+.other-container .other-body .latex{
+    color: rgb(0, 128, 128);
+}
+.other-container .other-body .cpp{
+    color: rgb(0, 89, 156);
 }
 
 /* ML/AI skill colors */
-.ml-container .ml-body .python{
-    color: rgb(14, 159, 60);
+.ml-container .ml-body .pytorch{
+    color: rgb(238, 76, 44);
+}
+.ml-container .ml-body .huggingface{
+    color: rgb(255, 210, 80);
+}
+.ml-container .ml-body .opencv{
+    color: rgb(66, 240, 170);
+}
+.ml-container .ml-body .matplotlib{
+    color: rgb(17, 119, 187);
 }
 .ml-container .ml-body .tensorflow{
     color: rgb(242, 132, 32);
 }
-.ml-container .ml-body .sklearn{
-    color: rgb(71, 136, 199);
+.ai-container .ai-body .claude{
+    color: rgb(217, 119, 87);
 }
-.ml-container .ml-body .pandas{
-    color: rgb(65, 137, 221);
+.ai-container .ai-body .rag{
+    color: rgb(129, 140, 248);
 }
-.ml-container .ml-body .numpy{
-    color: rgb(77, 171, 207);
+.ai-container .ai-body .vectordb{
+    color: rgb(56, 189, 248);
 }
-.ml-container .ml-body .kaggle{
-    color: rgb(32, 162, 219);
+.ai-container .ai-body .mcp{
+    color: rgb(167, 139, 250);
 }
-.ai-container .ai-body .gemini{
-    color: rgb(76, 139, 245);
+.ai-container .ai-body .whisper{
+    color: rgb(52, 211, 153);
 }
-.ai-container .ai-body .deepseek{
-    color: rgb(255, 107, 107);
+.backend-container .backend-body .fastapi{
+    color: rgb(0, 150, 136);
 }
-.ai-container .ai-body .chatgpt{
-    color: rgb(25, 195, 125);
+.backend-container .backend-body .python{
+    color: rgb(14, 159, 60);
 }
-.ai-container .ai-body .opencv{
-    color: rgb(66, 240, 170);
+.backend-container .backend-body .postgres{
+    color: rgb(51, 103, 145);
 }
-.ai-container .ai-body .nlp{
-    color: rgb(218, 165, 32);
+.backend-container .backend-body .docker{
+    color: rgb(13, 183, 237);
 }
-.ai-container .ai-body .data-analysis{
-    color: rgb(198, 61, 47);
+.tools-container .tools-body .aws{
+    color: rgb(255, 153, 0);
 }
-.ai-container .ai-body .jupyter{
-    color: rgb(243, 106, 39);
+.tools-container .tools-body .cuda{
+    color: rgb(118, 185, 0);
 }
 
 /* Background accents */
@@ -191,7 +218,9 @@
 .skills-container .back-container::before,
 .skills-container .other-container::before,
 .skills-container .ml-container::before,
-.skills-container .ai-container::before {
+.skills-container .ai-container::before,
+.skills-container .backend-container::before,
+.skills-container .tools-container::before {
     content: '';
     position: absolute;
     width: 150px;
@@ -231,6 +260,18 @@
     left: -50px;
 }
 
+.skills-container .backend-container::before {
+    background: rgb(0, 150, 136);
+    top: -50px;
+    left: -50px;
+}
+
+.skills-container .tools-container::before {
+    background: rgb(255, 153, 0);
+    bottom: -50px;
+    right: -50px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1200px) {
     .skills-container {
@@ -241,7 +282,9 @@
     .skills-container .back-container,
     .skills-container .other-container,
     .skills-container .ml-container,
-    .skills-container .ai-container {
+    .skills-container .ai-container,
+    .skills-container .backend-container,
+    .skills-container .tools-container {
         margin: 10px;
         min-width: 280px;
         max-width: 45%;
@@ -253,7 +296,9 @@
     .skills-container .back-container,
     .skills-container .other-container,
     .skills-container .ml-container,
-    .skills-container .ai-container {
+    .skills-container .ai-container,
+    .skills-container .backend-container,
+    .skills-container .tools-container {
         min-width: 280px;
         max-width: 90%;
         margin: 10px auto;
@@ -265,7 +310,9 @@
     .skills-container .back-container,
     .skills-container .other-container,
     .skills-container .ml-container,
-    .skills-container .ai-container {
+    .skills-container .ai-container,
+    .skills-container .backend-container,
+    .skills-container .tools-container {
         padding: 30px 20px;
     }
     
@@ -273,7 +320,9 @@
     .back-container .back-body .list-wrapper > i,
     .other-container .other-body .list-wrapper > i,
     .ml-container .ml-body .list-wrapper > i,
-    .ai-container .ai-body .list-wrapper > i {
+    .ai-container .ai-body .list-wrapper > i,
+    .backend-container .backend-body .list-wrapper > i,
+    .tools-container .tools-body .list-wrapper > i {
         font-size: 1.4rem;
         width: 30px;
     }
@@ -322,7 +371,7 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.ml-container, .ai-container {
+.ml-container, .ai-container, .backend-container, .tools-container {
   width: 100%;
   max-width: 22rem;
   background-color: var(--secondary-bg);
@@ -337,20 +386,20 @@
   overflow: hidden;
 }
 
-.ml-container:hover, .ai-container:hover {
+.ml-container:hover, .ai-container:hover, .backend-container:hover, .tools-container:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   border-color: var(--accent-light);
 }
 
-.ml-header, .ai-header {
+.ml-header, .ai-header, .backend-header, .tools-header {
   font-size: 1.4rem;
   margin-bottom: 25px;
   position: relative;
   display: inline-block;
 }
 
-.ml-header::after, .ai-header::after {
+.ml-header::after, .ai-header::after, .backend-header::after, .tools-header::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -361,14 +410,16 @@
   border-radius: 3px;
 }
 
-.ml-body, .ai-body {
+.ml-body, .ai-body, .backend-body, .tools-body {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .ml-container .list-wrapper,
-.ai-container .list-wrapper {
+.ai-container .list-wrapper,
+.backend-container .list-wrapper,
+.tools-container .list-wrapper {
   display: flex;
   align-items: center;
   margin: 12px 0;
@@ -380,13 +431,17 @@
 }
 
 .ml-container .list-wrapper:hover,
-.ai-container .list-wrapper:hover {
+.ai-container .list-wrapper:hover,
+.backend-container .list-wrapper:hover,
+.tools-container .list-wrapper:hover {
   background-color: rgba(255, 255, 255, 0.05);
   transform: translateX(5px);
 }
 
 .ml-container .list-wrapper > i,
-.ai-container .list-wrapper > i {
+.ai-container .list-wrapper > i,
+.backend-container .list-wrapper > i,
+.tools-container .list-wrapper > i {
   margin: 0 12px 0 0;
   font-size: 1.4rem;
   width: 35px;
@@ -394,7 +449,9 @@
 }
 
 .ml-container .list-wrapper > p,
-.ai-container .list-wrapper > p {
+.ai-container .list-wrapper > p,
+.backend-container .list-wrapper > p,
+.tools-container .list-wrapper > p {
   font-weight: 500;
 }
 
